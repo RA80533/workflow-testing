@@ -27,3 +27,8 @@ branches:
         strict: true
       
       enforce_admins: true
+      
+      restrictions:
+        apps: []
+        users: []
+        teams: []
