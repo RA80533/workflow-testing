@@ -4,6 +4,8 @@ repository:
   
   name: workflow-testing
   
+  description: A repository for testing Probot
+  
   private: false
   
   default_branch: master
