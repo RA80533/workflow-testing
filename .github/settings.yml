@@ -15,22 +15,29 @@ repository:
   allow_rebase_merge: true
 
 branches:
-  
   - name: master
-    
     protection:
-      
+      # Required
       required_pull_request_reviews:
-        required_approving_review_count: 2
+        # The number of approvals required (1–6)
+        required_approving_review_count: 1
+        # Dismiss approved reviews automatically when a new commit is pushed
         dismiss_stale_reviews: true
+        # Blocks merge until code owners have reviewed
         require_code_owner_reviews: true
-      
+        # Specify which users and teams can dismiss pull request reviews
+        dismissal_restrictions:
+          users: []
+          teams: []
+      # Required
       required_status_checks:
+        # Required
         strict: true
+        # Required
         contexts: []
-      
+      # Required
       enforce_admins: true
-      
+      # Required
       restrictions:
         apps: []
         users: []
